@@ -1,0 +1,88 @@
+
+########################################################################
+#      Date:           Mon Aug  8 20:43:33 PDT 2022
+#    Job ID:           1968438.v-qsvr-1.aidevcloud
+#      User:           u157167
+# Resources:           neednodes=1:fpga_runtime:arria10:ppn=2,nodes=1:fpga_runtime:arria10:ppn=2,walltime=06:00:00
+########################################################################
+
+ 
+:: WARNING: setvars.sh has already been run. Skipping re-execution.
+   To force a re-execution of setvars.sh, use the '--force' option.
+   Using '--force' can result in excessive use of your environment variables.
+  
+usage: source setvars.sh [--force] [--config=file] [--help] [...]
+  --force        Force setvars.sh to re-run, doing so may overload environment.
+  --config=file  Customize env vars using a setvars.sh configuration file.
+  --help         Display this help message and exit.
+  ...            Additional args are passed to individual env/vars.sh scripts
+                 and should follow this script's arguments.
+  
+  Some POSIX shells do not accept command-line options. In that case, you can pass
+  command-line options via the SETVARS_ARGS environment variable. For example:
+  
+  $ SETVARS_ARGS="ia32 --config=config.txt" ; export SETVARS_ARGS
+  $ . path/to/setvars.sh
+  
+  The SETVARS_ARGS environment variable is cleared on exiting setvars.sh.
+  
+./matrix.fpga
+-1.9844	-1.0315	-2.2979	
+
+Iteration 1: 22.8505
+Iteration 2: 19.0643
+Iteration 3: 19.0634
+Iteration 4: 19.0640
+Iteration 5: 19.0641
+Iteration 6: 19.0639
+Iteration 7: 19.0642
+Iteration 8: 19.0642
+Iteration 9: 19.0651
+Iteration 10: 19.0642
+Iteration 11: 19.0637
+Iteration 12: 19.0655
+Iteration 13: 19.0649
+Iteration 14: 19.0641
+Iteration 15: 19.0638
+Iteration 16: 19.0632
+Iteration 17: 19.0634
+Iteration 18: 19.0634
+Iteration 19: 19.0633
+Iteration 20: 19.0638
+Iteration 21: 19.0641
+Iteration 22: 19.0631
+Iteration 23: 19.0635
+Iteration 24: 19.0635
+Iteration 25: 19.0633
+Iteration 26: 19.0638
+Iteration 27: 19.0639
+Iteration 28: 19.0629
+Iteration 29: 19.0634
+Iteration 30: 19.0639
+Iteration 31: 19.0634
+Iteration 32: 19.0635
+Iteration 33: 19.0643
+Iteration 34: 19.0637
+Iteration 35: 19.0635
+Iteration 36: 19.0635
+Iteration 37: 19.0631
+Iteration 38: 19.0639
+Iteration 39: 19.0638
+Iteration 40: 19.0637
+Iteration 41: 19.0641
+Iteration 42: 19.0640
+Iteration 43: 19.0634
+Iteration 44: 19.0623
+Iteration 45: 19.0635
+Iteration 46: 19.0639
+Iteration 47: 19.0632
+Iteration 48: 19.0643
+Iteration 49: 19.0633
+Iteration 50: 19.0634
+Total: 956.9739
+
+########################################################################
+# End of output for job 1968438.v-qsvr-1.aidevcloud
+# Date: Mon Aug  8 20:59:44 PDT 2022
+########################################################################
+

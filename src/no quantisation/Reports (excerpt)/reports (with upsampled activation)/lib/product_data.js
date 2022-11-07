@@ -1,0 +1,1 @@
+var infoJSON={"compileInfo":{"nodes":[{"family":"Arria 10, 10AX115S2F45I2SGES, intel_a10gx_pac:pac_a10","id":1,"name":"matrix","product":"SYCL","quartus":"19.2.0 Build 57 Pro","time":"Sat Aug 13 08:09:58 2022","version":"2022.2.0 Build 133.4"}]}};

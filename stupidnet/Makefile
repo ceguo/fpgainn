@@ -1,0 +1,16 @@
+DPCPP_CXX = dpcpp
+DPCPP_CXXFLAGS = -std=c++17 -g -o
+DPCPP_LDFLAGS = 
+DPCPP_EXE_NAME = matrix
+DPCPP_SOURCES = src/matrix.cpp
+
+all:
+	$(DPCPP_CXX) $(DPCPP_CXXFLAGS) $(DPCPP_EXE_NAME) $(DPCPP_SOURCES) $(DPCPP_LDFLAGS)
+
+
+run:
+	./$(DPCPP_EXE_NAME)
+
+
+clean: 
+	rm -rf $(DPCPP_EXE_NAME)

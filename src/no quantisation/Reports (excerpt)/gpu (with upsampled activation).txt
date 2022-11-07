@@ -1,0 +1,108 @@
+
+########################################################################
+#      Date:           Sat 13 Aug 2022 02:18:24 AM PDT
+#    Job ID:           1970508.v-qsvr-1.aidevcloud
+#      User:           u157167
+# Resources:           neednodes=1:gpu:ppn=2,nodes=1:gpu:ppn=2,walltime=06:00:00
+########################################################################
+
+ 
+:: WARNING: setvars.sh has already been run. Skipping re-execution.
+   To force a re-execution of setvars.sh, use the '--force' option.
+   Using '--force' can result in excessive use of your environment variables.
+  
+usage: source setvars.sh [--force] [--config=file] [--help] [...]
+  --force        Force setvars.sh to re-run, doing so may overload environment.
+  --config=file  Customize env vars using a setvars.sh configuration file.
+  --help         Display this help message and exit.
+  ...            Additional args are passed to individual env/vars.sh scripts
+                 and should follow this script's arguments.
+  
+  Some POSIX shells do not accept command-line options. In that case, you can pass
+  command-line options via the SETVARS_ARGS environment variable. For example:
+  
+  $ SETVARS_ARGS="ia32 --config=config.txt" ; export SETVARS_ARGS
+  $ . path/to/setvars.sh
+  
+  The SETVARS_ARGS environment variable is cleared on exiting setvars.sh.
+  
+./matrix
+-1.9844	-1.0315	-2.2979	
+
+8.1038	0.4306	8.2133	8.1657	8.2354	6.8607	5.9469	7.0004	0.2623	6.7986	6.1917	6.1432	5.2357	0.7172	6.6613	
+
+0.1133	0.1133	0.1132	0.1131	0.1129	...
+0.1133	0.1133	0.1132	0.1131	0.1129	...
+0.1128	0.1128	0.1127	0.1125	0.1123	...
+0.1118	0.1118	0.1116	0.1113	0.1110	...
+0.1097	0.1097	0.1106	0.1101	0.1097	...
+...
+0.1814	0.1814	0.1852	0.1927	0.2114	...
+0.1814	0.1814	0.1852	0.1927	0.2114	...
+0.1985	0.1985	0.2045	0.2166	0.2287	...
+0.2326	0.2326	0.2432	0.2643	0.2855	...
+0.3181	0.3181	0.2818	0.3121	0.3424	...
+...
+0.1325	0.1325	0.1322	0.1315	0.1303	...
+0.1325	0.1325	0.1322	0.1315	0.1303	...
+0.1326	0.1326	0.1322	0.1315	0.1307	...
+0.1327	0.1327	0.1322	0.1313	0.1304	...
+0.1332	0.1332	0.1323	0.1312	0.1300	...
+...
+Iteration 1: 2.0084
+Iteration 2: 0.9258
+Iteration 3: 0.9284
+Iteration 4: 0.9268
+Iteration 5: 0.9278
+Iteration 6: 0.9281
+Iteration 7: 0.9287
+Iteration 8: 0.9270
+Iteration 9: 0.9255
+Iteration 10: 0.9313
+Iteration 11: 0.9274
+Iteration 12: 0.9246
+Iteration 13: 0.9287
+Iteration 14: 0.9354
+Iteration 15: 0.9271
+Iteration 16: 0.9298
+Iteration 17: 0.9261
+Iteration 18: 0.9267
+Iteration 19: 0.9258
+Iteration 20: 0.9251
+Iteration 21: 0.9279
+Iteration 22: 0.9272
+Iteration 23: 0.9269
+Iteration 24: 0.9287
+Iteration 25: 0.9283
+Iteration 26: 0.9266
+Iteration 27: 0.9257
+Iteration 28: 0.9273
+Iteration 29: 0.9273
+Iteration 30: 0.9263
+Iteration 31: 0.9250
+Iteration 32: 0.9263
+Iteration 33: 0.9296
+Iteration 34: 0.9254
+Iteration 35: 0.9281
+Iteration 36: 0.9274
+Iteration 37: 0.9271
+Iteration 38: 0.9265
+Iteration 39: 0.9298
+Iteration 40: 0.9341
+Iteration 41: 0.9263
+Iteration 42: 0.9263
+Iteration 43: 0.9278
+Iteration 44: 0.9284
+Iteration 45: 0.9255
+Iteration 46: 0.9281
+Iteration 47: 0.9292
+Iteration 48: 0.9270
+Iteration 49: 0.9277
+Iteration 50: 0.9298
+Total: 47.4620
+
+########################################################################
+# End of output for job 1970508.v-qsvr-1.aidevcloud
+# Date: Sat 13 Aug 2022 02:19:21 AM PDT
+########################################################################
+

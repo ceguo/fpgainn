@@ -1,0 +1,2757 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":2801
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"1024 bytes"
+          , "Channels":"2 channels"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR Width (bits)":"512, 512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":2803
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 1"
+          , "id":2804
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":2802
+      , "parent":"2801"
+      , "bw":"34133.00"
+      , "num_channels":"2"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":2805
+      , "parent":"2801"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":2806
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":2809
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Writes":"31"
+              , "User specified force-single-store-ring flag":"False"
+              , "Store Rings":"2"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect"
+          , "id":2807
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Reads":"41"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect Router"
+          , "id":2808
+          , "details":
+          [
+            {
+              "type":"table"
+              , "User specified num-reorder flag":"Unset"
+            }
+          ]
+          , "type":"memsys"
+          , "children":
+          [
+            {
+              "name":"Bus 0"
+              , "id":2884
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 1"
+              , "id":2885
+              , "type":"memsys"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Loads"
+      , "id":2814
+      , "parent":"2801"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"LD"
+          , "id":2815
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"17"
+              , "Latency":"209 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16814
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2816
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"PREFETCHING"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16836
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2818
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"85"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16866
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2819
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"85"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16866
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2820
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"0"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16870
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2822
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"0"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16907
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2824
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"85"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16902
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2825
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"85"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16902
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2826
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16930
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2827
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"241 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16930
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2828
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"0"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"PREFETCHING"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16932
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2831
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"225 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16951
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2832
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"225 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16951
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2833
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"PREFETCHING"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16968
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2835
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16984
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2837
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16987
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2838
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16987
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2841
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16996
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2842
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16996
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2844
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"90"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17002
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2845
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"281 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17002
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2848
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17034
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2850
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17037
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2851
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17037
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2854
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17046
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2855
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17046
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2857
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"90"
+              , "Latency":"193 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17052
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2858
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"2"
+              , "Latency":"281 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17052
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2861
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"209 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17086
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2863
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"305 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17108
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2865
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"503"
+              , "Latency":"305 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17109
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2867
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1005"
+              , "Latency":"305 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17110
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2869
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1507"
+              , "Latency":"305 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17111
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2871
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"302 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17125
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2873
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"398"
+              , "Latency":"302 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17126
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2875
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"273 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17139
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2876
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"273 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17139
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2878
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"449"
+              , "Latency":"273 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17140
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2879
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"449"
+              , "Latency":"273 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17140
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2881
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"17"
+              , "Latency":"300 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17155
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":2882
+          , "kwidth":"64"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"17"
+              , "Latency":"300 cycles"
+              , "Width":"64 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17155
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":2810
+      , "parent":"2801"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":2811
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16755
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2812
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"80"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16771
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2813
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"16"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16818
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2817
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"8"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16836
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2821
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"248"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16870
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2823
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"248"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16907
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2829
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"9"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16932
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2830
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"18"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16953
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2834
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"99"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16968
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2836
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"196"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16984
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2839
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"200"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16989
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2840
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"284"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16990
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2843
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"200"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":16997
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2846
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"289"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17009
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2847
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"373"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17010
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2849
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"196"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17034
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2852
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"200"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17039
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2853
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"284"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17040
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2856
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"200"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17047
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2859
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"289"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17059
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2860
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"373"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17060
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2862
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"25"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17088
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2864
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"307"
+              , "Latency":"196 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17108
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2866
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"809"
+              , "Latency":"196 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17109
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2868
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1311"
+              , "Latency":"196 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17110
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2870
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1813"
+              , "Latency":"196 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17111
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2872
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"314"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17125
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2874
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"711"
+              , "Latency":"84 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17126
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2877
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"285"
+              , "Latency":"164 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17139
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2880
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"733"
+              , "Latency":"164 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17140
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":2883
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"338"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"'lambda'(auto)"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u157167/mmzk/src/matrix.cpp"
+                , "line":17155
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":2803
+      , "to":2802
+    }
+    , {
+      "from":2802
+      , "to":2803
+    }
+    , {
+      "from":2804
+      , "to":2802
+    }
+    , {
+      "from":2802
+      , "to":2804
+    }
+    , {
+      "from":2807
+      , "to":2806
+    }
+    , {
+      "from":2809
+      , "to":2806
+    }
+    , {
+      "from":2806
+      , "to":2802
+    }
+    , {
+      "from":2811
+      , "to":2809
+    }
+    , {
+      "from":2812
+      , "to":2809
+    }
+    , {
+      "from":2813
+      , "to":2809
+    }
+    , {
+      "from":2815
+      , "to":2807
+    }
+    , {
+      "from":2816
+      , "to":2807
+    }
+    , {
+      "from":2817
+      , "to":2809
+    }
+    , {
+      "from":2818
+      , "to":2807
+    }
+    , {
+      "from":2819
+      , "to":2807
+    }
+    , {
+      "from":2820
+      , "to":2807
+    }
+    , {
+      "from":2821
+      , "to":2809
+    }
+    , {
+      "from":2822
+      , "to":2807
+    }
+    , {
+      "from":2823
+      , "to":2809
+    }
+    , {
+      "from":2824
+      , "to":2807
+    }
+    , {
+      "from":2825
+      , "to":2807
+    }
+    , {
+      "from":2826
+      , "to":2807
+    }
+    , {
+      "from":2827
+      , "to":2807
+    }
+    , {
+      "from":2828
+      , "to":2807
+    }
+    , {
+      "from":2829
+      , "to":2809
+    }
+    , {
+      "from":2830
+      , "to":2809
+    }
+    , {
+      "from":2831
+      , "to":2807
+    }
+    , {
+      "from":2832
+      , "to":2807
+    }
+    , {
+      "from":2833
+      , "to":2807
+    }
+    , {
+      "from":2834
+      , "to":2809
+    }
+    , {
+      "from":2835
+      , "to":2807
+    }
+    , {
+      "from":2836
+      , "to":2809
+    }
+    , {
+      "from":2837
+      , "to":2807
+    }
+    , {
+      "from":2838
+      , "to":2807
+    }
+    , {
+      "from":2839
+      , "to":2809
+    }
+    , {
+      "from":2840
+      , "to":2809
+    }
+    , {
+      "from":2841
+      , "to":2807
+    }
+    , {
+      "from":2842
+      , "to":2807
+    }
+    , {
+      "from":2843
+      , "to":2809
+    }
+    , {
+      "from":2844
+      , "to":2807
+    }
+    , {
+      "from":2845
+      , "to":2807
+    }
+    , {
+      "from":2846
+      , "to":2809
+    }
+    , {
+      "from":2847
+      , "to":2809
+    }
+    , {
+      "from":2848
+      , "to":2807
+    }
+    , {
+      "from":2849
+      , "to":2809
+    }
+    , {
+      "from":2850
+      , "to":2807
+    }
+    , {
+      "from":2851
+      , "to":2807
+    }
+    , {
+      "from":2852
+      , "to":2809
+    }
+    , {
+      "from":2853
+      , "to":2809
+    }
+    , {
+      "from":2854
+      , "to":2807
+    }
+    , {
+      "from":2855
+      , "to":2807
+    }
+    , {
+      "from":2856
+      , "to":2809
+    }
+    , {
+      "from":2857
+      , "to":2807
+    }
+    , {
+      "from":2858
+      , "to":2807
+    }
+    , {
+      "from":2859
+      , "to":2809
+    }
+    , {
+      "from":2860
+      , "to":2809
+    }
+    , {
+      "from":2861
+      , "to":2807
+    }
+    , {
+      "from":2862
+      , "to":2809
+    }
+    , {
+      "from":2863
+      , "to":2807
+    }
+    , {
+      "from":2864
+      , "to":2809
+    }
+    , {
+      "from":2865
+      , "to":2807
+    }
+    , {
+      "from":2866
+      , "to":2809
+    }
+    , {
+      "from":2867
+      , "to":2807
+    }
+    , {
+      "from":2868
+      , "to":2809
+    }
+    , {
+      "from":2869
+      , "to":2807
+    }
+    , {
+      "from":2870
+      , "to":2809
+    }
+    , {
+      "from":2871
+      , "to":2807
+    }
+    , {
+      "from":2872
+      , "to":2809
+    }
+    , {
+      "from":2873
+      , "to":2807
+    }
+    , {
+      "from":2874
+      , "to":2809
+    }
+    , {
+      "from":2875
+      , "to":2807
+    }
+    , {
+      "from":2876
+      , "to":2807
+    }
+    , {
+      "from":2877
+      , "to":2809
+    }
+    , {
+      "from":2878
+      , "to":2807
+    }
+    , {
+      "from":2879
+      , "to":2807
+    }
+    , {
+      "from":2880
+      , "to":2809
+    }
+    , {
+      "from":2881
+      , "to":2807
+    }
+    , {
+      "from":2882
+      , "to":2807
+    }
+    , {
+      "from":2883
+      , "to":2809
+    }
+    , {
+      "from":2802
+      , "to":2884
+    }
+    , {
+      "from":2802
+      , "to":2885
+    }
+    , {
+      "from":2884
+      , "to":2815
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2816
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2818
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2819
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2820
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2822
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2824
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2825
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2826
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2827
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2828
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2831
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2832
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2833
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2835
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2837
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2838
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2841
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2842
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2844
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2845
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2848
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2850
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2851
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2854
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2855
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2857
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2858
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2861
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2863
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2865
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2867
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2869
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2871
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2873
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2875
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2876
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2878
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2879
+      , "reverse":1
+    }
+    , {
+      "from":2885
+      , "to":2881
+      , "reverse":1
+    }
+    , {
+      "from":2884
+      , "to":2882
+      , "reverse":1
+    }
+  ]
+}

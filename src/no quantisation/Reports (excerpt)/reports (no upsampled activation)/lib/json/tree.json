@@ -1,0 +1,490 @@
+{
+  "nodes":
+  [
+    {
+      "name":"'lambda'(auto)"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":11
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":43
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":2
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":12
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":45
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":13
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":53
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 3"
+              , "id":54
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":14
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":60
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":61
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":3
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":15
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 6"
+              , "id":63
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":16
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 7"
+              , "id":71
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":17
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 8"
+              , "id":91
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 9"
+              , "id":100
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":4
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":18
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 10"
+              , "id":108
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":5
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":19
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 11"
+              , "id":110
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":20
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 12"
+              , "id":124
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 13"
+              , "id":127
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":21
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 14"
+              , "id":136
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 15"
+              , "id":140
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":6
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":22
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 16"
+              , "id":142
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":23
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 17"
+              , "id":151
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 18"
+              , "id":155
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":24
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 19"
+              , "id":172
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 20"
+              , "id":175
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":7
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":25
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":26
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 21"
+              , "id":184
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 22"
+              , "id":187
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":27
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 23"
+              , "id":200
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":8
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":28
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":29
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 24"
+              , "id":209
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":30
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 25"
+              , "id":217
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 26"
+              , "id":220
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":9
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":31
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 27"
+              , "id":221
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":32
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":33
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B3"
+          , "id":34
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 28"
+              , "id":269
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B4"
+          , "id":35
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 29"
+              , "id":287
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B5"
+          , "id":36
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 30"
+              , "id":318
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B6"
+          , "id":37
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B7"
+          , "id":38
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B8"
+          , "id":39
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"'lambda'(auto)"
+      , "id":10
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"'lambda'(auto).B0"
+          , "id":40
+          , "type":"bb"
+        }
+        , {
+          "name":"'lambda'(auto).B1"
+          , "id":41
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 31"
+              , "id":351
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 32"
+              , "id":353
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"'lambda'(auto).B2"
+          , "id":42
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 33"
+              , "id":357
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

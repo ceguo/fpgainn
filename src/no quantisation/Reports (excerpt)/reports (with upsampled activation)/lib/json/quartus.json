@@ -1,0 +1,179 @@
+{
+    "quartusFitClockSummary"         : {
+        "nodes" : [{
+            "name"              : "Quartus Fitter: Clock Frequency (MHz)",
+            "kernel clock"      : "200.00",
+            "kernel clock fmax" : "200.00",
+            "clock1x"           : "200.00",
+            "clock2x"           : "400.00",
+            "details"           : [{
+                "text" : "The actual frequency of kernel clock is 200.00 MHz after platform PLL adjustment. The maximum frequency for kernel clock is 200.00 MHz. "
+            }],
+            "type"              : "system"
+        }]
+    },
+    "quartusFitResourceUsageSummary" : {
+        "nodes" : [{
+            "type" : "system",
+            "id"   : "1000",
+            "name" : "Quartus Fitter: Kernel System",
+            "alm"  : "193685.6",
+            "reg"  : "319846",
+            "dsp"  : "207",
+            "ram"  : "1135",
+            "mlab" : "5401"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k0_ZTSZZ6mk_matRN2cl4sycl5queueEiifPfENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "1210.8",
+            "reg"  : "2329",
+            "dsp"  : "2",
+            "ram"  : "0",
+            "mlab" : "37"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k10_ZTSZZ7bottom9RN2cl4sycl5queueEiiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "26005.4",
+            "reg"  : "25497",
+            "dsp"  : "4",
+            "ram"  : "124",
+            "mlab" : "1215"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k11_ZTSZZ7averageRN2cl4sycl5queueEiiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "4640.0",
+            "reg"  : "4595",
+            "dsp"  : "6",
+            "ram"  : "16",
+            "mlab" : "218"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k12_ZTSZZ9upsample4RN2cl4sycl5queueEiiiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "7306.5",
+            "reg"  : "13055",
+            "dsp"  : "12",
+            "ram"  : "113",
+            "mlab" : "151"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k13_ZTSZZ9upsample4RN2cl4sycl5queueEiiiPfS3_ENKUlRT_E0_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "5541.5",
+            "reg"  : "10825",
+            "dsp"  : "16",
+            "ram"  : "56",
+            "mlab" : "116"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k14_ZTSZZ9upsample4RN2cl4sycl5queueEiiiPfS3_ENKUlRT_E1_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "5147.9",
+            "reg"  : "8795",
+            "dsp"  : "14",
+            "ram"  : "86",
+            "mlab" : "88"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k15_ZTSZZ9upsample4RN2cl4sycl5queueEiiiPfS3_ENKUlRT_E2_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "3414.2",
+            "reg"  : "6599",
+            "dsp"  : "16",
+            "ram"  : "35",
+            "mlab" : "73"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k1_ZTSZZ11mk_mat_randRN2cl4sycl5queueEiiPfENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "14422.9",
+            "reg"  : "21988",
+            "dsp"  : "23",
+            "ram"  : "15",
+            "mlab" : "45"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k2_ZTSZZ8max_poolRN2cl4sycl5queueEiiiPfiPiS4_S3_ENKUlRT_E_clINS0_7handlerEEEDaS6_EUlS5_E",
+            "alm"  : "5734.6",
+            "reg"  : "6967",
+            "dsp"  : "28",
+            "ram"  : "20",
+            "mlab" : "231"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k3_ZTSZZ4reluRN2cl4sycl5queueEiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "1549.3",
+            "reg"  : "2773",
+            "dsp"  : "0",
+            "ram"  : "13",
+            "mlab" : "33"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k4_ZTSZZ4convRN2cl4sycl5queueEiiiiPfiiS3_S3_PiS4_S3_ENKUlRT_E_clINS0_7handlerEEEDaS6_EUlS5_E",
+            "alm"  : "16458.0",
+            "reg"  : "21896",
+            "dsp"  : "18",
+            "ram"  : "115",
+            "mlab" : "550"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k5_ZTSZZ8conv_padRN2cl4sycl5queueEiiiiPfiiS3_S3_S3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "16929.3",
+            "reg"  : "22761",
+            "dsp"  : "18",
+            "ram"  : "123",
+            "mlab" : "560"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k6_ZTSZZ15fully_connectedRN2cl4sycl5queueEiiPfS3_S3_S3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "7453.5",
+            "reg"  : "5224",
+            "dsp"  : "4",
+            "ram"  : "63",
+            "mlab" : "373"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k7_ZTSZZ11l2_distanceRN2cl4sycl5queueEiiPfiS3_S3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "7597.8",
+            "reg"  : "5807",
+            "dsp"  : "11",
+            "ram"  : "82",
+            "mlab" : "377"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k8_ZTSZZ21distance_2_similarityRN2cl4sycl5queueEiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "5461.4",
+            "reg"  : "9696",
+            "dsp"  : "31",
+            "ram"  : "56",
+            "mlab" : "65"
+        },{
+            "type" : "kernel",
+            "id"   : "1010",
+            "name" : "k9_ZTSZZ4top9RN2cl4sycl5queueEiiPfS3_ENKUlRT_E_clINS0_7handlerEEEDaS5_EUlS4_E",
+            "alm"  : "26051.3",
+            "reg"  : "25523",
+            "dsp"  : "4",
+            "ram"  : "124",
+            "mlab" : "1215"
+        },{
+            "type" : "aclsystem",
+            "id"   : "1001",
+            "name" : "Quartus Fitter: Total Used (Entire System)",
+            "alm"  : "262,054",
+            "reg"  : "418,786",
+            "dsp"  : "165",
+            "ram"  : "1,492"
+        }]
+    }
+}
